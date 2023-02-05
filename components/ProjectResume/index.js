@@ -36,9 +36,8 @@ import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
-const resumeLink ="https://github.com/lihsinn/portfolio/raw/main/data/resume.pdf";
-  // "https://raw.githubusercontent.com/soumyajit4419/portfolio/master/src/Assets/Soumyajit_Behera-BIT_MESRA.pdf";
-
+//const resumeLink = " https://raw.githubusercontent.com/lihsinn/portfolio/main/data/resume.pdf";
+const resumeLink = "https://github.com/lihsinn/portfolio/raw/main/data/resume.pdf";
 
 
 const ProjectResume = () => {
@@ -57,16 +56,16 @@ const ProjectResume = () => {
       </div> */}
       <div className="w-3/5">
         {/* <h2 className="text-lg font-bold">DD</h2> */}
-        <Container fluid className="resume-section">
+        <Container fluid className="resume-section" >
           <Particle />
-          <Row style={{ justifyContent: "center", position: "relative" }}>
+          <Row style={{ justifyContent: "center", position: "relative" , top:'-30px'}}>
             <Button
               variant="primary"
-              href={'../../data/resume.pdf'}
+              href={resumeLink}
               target="_blank"
-              style={{ maxWidth: "250px" }}
+              style={{ maxWidth: "250px" , justifyContent:'center', border:'1px solid black' ,borderRadius:'4px',padding:'5px'}}
             >
-              <AiOutlineDownload />
+              <AiOutlineDownload style={{display: 'inline'}}/>
               &nbsp;Download CV
             </Button>
           </Row>
@@ -77,14 +76,14 @@ const ProjectResume = () => {
             </Document>
           </Row>
 
-          <Row style={{ justifyContent: "center", position: "relative" }}>
+          <Row style={{ justifyContent: "center", position: "relative" , top:'30px'}}>
             <Button
               variant="primary"
-              href={'../../data/resume.pdf'}
+              href={resumeLink}
               target="_blank"
-              style={{ maxWidth: "250px" }}
+              style={{ maxWidth: "250px" , justifyContent:'center', border:'1px solid black' ,borderRadius:'4px',padding:'5px'}}
             >
-              <AiOutlineDownload />
+              <AiOutlineDownload style={{display: 'inline'}}/>
               &nbsp;Download CV
             </Button>
           </Row>
